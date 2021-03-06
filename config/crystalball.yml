@@ -1,0 +1,26 @@
+# Custom path to your execution map. Can be file or folder. Default: `tmp/crystalball_data.yml`
+execution_map_path: 'config/crystalball_data.yml'
+# Maximum amount of examples which will be run automatically. Default: no limit.
+# If prediction size is over the limit Crystalball will prune prediction to fit the limit.
+# examples_limit: 0
+#
+# Custom prediction builder class to use. Default: 'Crystalball::RSpec::StandardPredictionBuilder'
+# prediction_builder_class_name: 'Crystalball::RSpec::StandardPredictionBuilder'
+# #
+# Set of requires. Usually used to require custom predictor class file. Default: []
+# requires:
+#   - './standard_prediction_builder'
+#
+# Custom map expiration period in seconds. 0 = Disable expiration check. Default: 86400 (1 day)
+# 2 weeks. It is only a warning to the user.
+map_expiration_period: 1209600
+#
+# Custom RSpec runner class to use. Default: 'Crystalball::RSpec::Runner'
+# runner_class_name: 'RunnerClass'
+#
+# "From" value for `git diff` command. default: 'HEAD'
+diff_from: 'main'
+#
+# "To" value for `git diff` command. default: nil
+# nil in this case means HEAD and unstaged and uncommitted changes
+# diff_to: 'HEAD'

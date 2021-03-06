@@ -13,6 +13,22 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+if ENV["CRYSTALBALL"] == "true"
+  require "crystalball"
+  require "crystalball/rails"
+  require 'crystalball/map_generator/parser_strategy'
+  Crystalball::MapGenerator.start! do |config|
+    config.map_storage_path = "config/crystalball_data.yml"
+    config.register Crystalball::MapGenerator::CoverageStrategy.new
+    config.register Crystalball::MapGenerator::DescribedClassStrategy.new
+    config.register Crystalball::Rails::MapGenerator::ActionViewStrategy.new
+    config.register Crystalball::MapGenerator::AllocatedObjectsStrategy.build(only: ['ActiveRecord::Base'])
+    config.register Crystalball::MapGenerator::ParserStrategy.new(pattern: /^(app|lib)/)
+    config.compact_map = false
+  end
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
