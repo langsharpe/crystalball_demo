@@ -7,6 +7,7 @@ RSpec.describe "posts/show", type: :view do
       body: "MyText",
       published: false
     ))
+    @post.comments.create(body: "Comment Body")
   end
 
   it "renders attributes in <p>" do
@@ -14,5 +15,6 @@ RSpec.describe "posts/show", type: :view do
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/false/)
+    expect(rendered).to match(/Comment Body/)
   end
 end

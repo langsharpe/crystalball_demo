@@ -1,0 +1,36 @@
+---
+:type: Crystalball::ExecutionMap
+:commit: 7492dcacd47d1c6818787c83860964c5497158d4
+:timestamp: 1614997891
+:version:
+---
+"./spec/models/post_spec.rb[1:1:1]":
+- spec/models/post_spec.rb
+- app/models/post.rb
+- app/models/application_record.rb
+"./spec/models/post_spec.rb[1:2:1]":
+- spec/models/post_spec.rb
+- app/models/comment.rb
+- app/models/post.rb
+- app/models/application_record.rb
+"./spec/requests/posts_spec.rb[1:1:1]":
+- spec/requests/posts_spec.rb
+- app/controllers/posts_controller.rb
+- app/controllers/application_controller.rb
+- app/views/posts/index.html.erb
+- app/views/layouts/application.html.erb
+- app/models/post.rb
+- app/models/application_record.rb
+"./spec/requests/posts_spec.rb[1:2:1]":
+- spec/requests/posts_spec.rb
+- app/controllers/posts_controller.rb
+- app/views/posts/show.html.erb
+- app/views/layouts/application.html.erb
+- app/models/post.rb
+- app/models/application_record.rb
+"./spec/views/posts/show.html.erb_spec.rb[1:1]":
+- spec/views/posts/show.html.erb_spec.rb
+- app/views/posts/show.html.erb
+- app/models/post.rb
+- app/models/application_record.rb
+- app/models/comment.rb
